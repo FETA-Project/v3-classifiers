@@ -1,0 +1,14 @@
+apps_selection: all-known
+dataset_name: CESNET-TLS-Year22
+dataset_size: S
+datazoo_version: 0.0.7
+flowstats_clip: 0.99
+flowstats_scaler: robust
+fold_id: 0
+ipt_scaler: standard
+psizes_scaler: standard
+return_torch: true
+test_period: M-2022-10
+train_period: M-2022-9
+use_push_flags: false
+use_tcp_features: true

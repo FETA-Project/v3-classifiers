@@ -1,0 +1,14 @@
+apps_selection: all-known
+dataset_name: CESNET-QUIC22
+dataset_size: M
+datazoo_version: 0.0.7
+flowstats_clip: 1
+flowstats_scaler: no-scaler
+fold_id: 0
+ipt_scaler: no-scaler
+psizes_scaler: no-scaler
+test_period: W-2022-45
+train_dataloader_order: sequential
+train_period: W-2022-44
+use_push_flags: false
+use_tcp_features: false

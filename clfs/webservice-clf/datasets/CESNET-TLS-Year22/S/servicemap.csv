@@ -1,0 +1,201 @@
+Service,Service Provider,Tag,Service Category,Domains
+Adobe Ads,adobe,adobe-ads,Advertising,"*.2o7.net, *.adobeaemcloud.com, *.adobecce.com, *.adobeconnect.com, *.adobedtm.com, *.adobeprimetime.com, *.adobess.com, *.adobetag.com, *.business.adobe.com, *.demdex.com, *.demdex.net, *.everestads.net, *.everesttech.net, *.marketo.com, *.mktoresp.com, *.mktoutil.com, *.omniture.com, *.omtrdc.net, *.ss-omtrdc.net, *.sstats.adobe.com, *.tmogul.com, *.tubemogul.com"
+Adobe Analytics,adobe,adobe-analytics,Analytics & Telemetry,"hbrt.adobe.com, adobe.demdex.net, sstats.adobe.com"
+Adobe Authentication Services,adobe,adobe-authentication,Authentication,"*.adobelogin.com, adobeid-na1.services.adobe.com, na1e-acc.services.adobe.com, na1r.services.adobe.com"
+Adobe Document Cloud,adobe,adobe-cloud,File sharing,"dc-api.adobe.io, cloud.acrobat.com, *.files.acrobat.com"
+Adobe Notifications,adobe,adobe-notifications,Notifications,notify.adobe.io
+Adobe Universal Search,adobe,adobe-search,Search,adobesearch.adobe.io
+Adobe Updater,adobe,adobe-updater,Software updates,armmf.adobe.com
+Alza Banners,alza,alza-bnr,Advertising,bnr.alza.cz
+Alza LogAPI,alza,alza-logapi,Analytics & Telemetry,logapi.alza.cz
+Alza CDN,alza,alza-cdn,Media,cdn.alza.cz
+Alza SignalR,alza,alza-signalr,Other APIs,signalr.alza.cz
+Alza WebAPI,alza,alza-webapi,Other APIs,webapi.alza.cz
+Amazon Advertising,amazon,amazon-advertising,Advertising,"*.aax-eu.amazon.co.uk, *.aax-eu.amazon.es, *.aax-eu.amazon.in, *.aax-eu.amazon.nl, *.amazon-adsystem.amazon.com, *.amazon-adsystem.com, *.device-metrics-us.amazon.com, *.mads-eu.amazon.com, *.mads.amazon.com, *.rfihub.com, *.rfihub.net, *.serving-sys.com, *.sizmek.com, *.video-ads.a2z.com"
+Amazon Prime Video,amazon,amazon-prime,Media,"*.aiv-cdn.net, *.aiv-delivery.net, *.amazonvideo.com, *.atv-ext-eu.amazon.com, *.atv-ext-fe.amazon.com, *.atv-ext.amazon.com, *.atv-ps.amazon.com, *.primevideo.com, *.pv-cdn.net"
+Amazon Alexa,amazon,amazon-alexa,Virtual assistant,"*.alexa.amazon.ca, *.alexa.amazon.co.jp, *.alexa.amazon.co.uk, *.alexa.amazon.com, *.alexa.amazon.it, *.alexa.na.gateway.devices.a2z.com, *.amazonalexa.com, *.avs-alexa-1-eu.amazon.com, *.avs-alexa-10-eu.amazon.com, *.avs-alexa-10-na.amazon.com, *.avs-alexa-11-eu.amazon.com, *.avs-alexa-11-na.amazon.com, *.avs-alexa-12-eu.amazon.com, *.avs-alexa-12-na.amazon.com, *.avs-alexa-13-eu.amazon.com, *.avs-alexa-13-na.amazon.com, *.avs-alexa-14-eu.amazon.com, *.avs-alexa-14-na.amazon.com, *.avs-alexa-15-eu.amazon.com, *.avs-alexa-15-na.amazon.com, *.avs-alexa-16-eu.amazon.com, *.avs-alexa-16-na.amazon.com, *.avs-alexa-17-eu.amazon.com, *.avs-alexa-17-na.amazon.com, *.avs-alexa-18-eu.amazon.com, *.avs-alexa-18-na.amazon.com, *.avs-alexa-19-eu.amazon.com, *.avs-alexa-19-na.amazon.com, *.avs-alexa-2-eu.amazon.com, *.avs-alexa-2-na.amazon.com, *.avs-alexa-20-eu.amazon.com, *.avs-alexa-20-na.amazon.com, *.avs-alexa-3-eu.amazon.com, *.avs-alexa-3-na.amazon.com, *.avs-alexa-4-eu.amazon.com, *.avs-alexa-4-na.amazon.com, *.avs-alexa-5-eu.amazon.com, *.avs-alexa-5-na.amazon.com, *.avs-alexa-6-eu.amazon.com, *.avs-alexa-6-na.amazon.com, *.avs-alexa-7-eu.amazon.com, *.avs-alexa-7-na.amazon.com, *.avs-alexa-8-eu.amazon.com, *.avs-alexa-8-na.amazon.com, *.avs-alexa-9-eu.amazon.com, *.avs-alexa-9-na.amazon.com, *.bob-dispatch-prod-eu.amazon.com, *.bob-dispatch-prod-na.amazon.com, *.latinum-eu.amazon.com, *.layla.amazon.com, *.layla.amazon.de, *.pitangui.amazon.com"
+Apple OCSP,apple,apple-ocsp,Authentication,ocsp2.apple.com
+Apple Authentication,apple,apple-authentication,Authentication,gsa.apple.com
+Apple iCloud,apple,apple-icloud,File sharing,"*.apple-cloudkit.com, *.apple-icloud.cn, *.appleicloud.cn, *.icloud-apple.cn, *.icloud-content.com, *.icloud.apple, *.icloud.ch, *.icloud.com, *.icloud.com.cn, *.icloud.de, *.icloud.ee, *.icloud.fi, *.icloud.fr, *.icloud.hu, *.icloud.ie, *.icloud.is, *.icloud.jp, *.icloud.lv, *.icloud.net.cn, *.icloud.om, *.icloud.org, *.icloud.pt, *.icloud.ro, *.icloud.se, *.icloud.si, *.icloud.sk, *.icloud.vn"
+Apple Location Services,apple,apple-location,Location,"iphone-ld.apple.com, gs-loc.apple.com, *.ls.apple.com, cl2.apple.com, cl3.apple.com, gsp10-ssl.apple.com"
+Apple iTunes,apple,apple-itunes,Music,"*.applemusic.apple, *.e673.dsce9.akamaiedge.net, *.itun.es, *.itunes.apple.com, *.itunes.ca, *.itunes.co, *.itunes.co.th, *.itunes.com, *.itunes.hk, *.itunes.mx, *.itunes.org, *.itunes.us, *.music.apple.com"
+Apple Push Notifications,apple,apple-push,Notifications,*.push.apple.com
+Apple Pancake,apple,apple-pancake,Other APIs,pancake.apple.com
+Apple Updates,apple,apple-updates,Software updates,"mesu.apple.com, xp.apple.com, configuration.apple.com"
+Apple Siri,apple,apple-siri,Virtual assistant,"*.dejavu.apple.com, *.guzzoni-apple-com.v.aaplimg.com, *.guzzoni.apple.com, *.siri.apple.com, *.swallow.apple.com"
+Apple Weather,apple,apple-weather,Weather,weather-data.apple.com
+CESNET Login,cesnet,cesnet-login,Authentication,login.cesnet.cz
+CESNET Filesender,cesnet,cesnet-filesender,File sharing,filesender.cesnet.cz
+CESNET Nerd,cesnet,cesnet-nerd,Information systems,nerd.cesnet.cz
+CESNET Gerrit,cesnet,cesnet-gerrit,Information systems,gerrit.cesnet.cz
+CESNET Perun,cesnet,cesnet-perun,Information systems,perun.cesnet.cz
+CESNET Kalendar,cesnet,cesnet-kalendar,Mail,kalendar.cesnet.cz
+CESNET CTI HUB,cesnet,cesnet-ctihub,Other APIs,cti-hub.cesnet.cz
+CTU IDP2,ctu,ctu-idp2,Authentication,idp2.civ.cvut.cz
+CTU KOS,ctu,ctu-kos,Information systems,*.kos.cvut.cz
+CTU Matrix Server,ctu,ctu-matrix,Instant messaging,im.su.cvut.cz
+CTU FEL Mail,ctu,ctu-felmail,Mail,wimap.feld.cvut.cz
+CTU KOS API,ctu,ctu-kosapi,Other APIs,kosapi.fit.cvut.cz
+"ESET Data Framework (Anti-Theft, ESET License Administrator, Parental control, Web control)",eset,eset-edf,Antivirus,edf.eset.com
+ESET Submit suspicious files and anonymous statistical information,eset,eset-ts,Antivirus,ts.eset.com
+ESET Dynamic Threat Defense,eset,eset-edtd,Antivirus,"r.edtd.eset.com, t.edtd.eset.com"
+ESET Secure Authentication Provisioning Server (two-factor authentication),eset,eset-esa,Authentication,esa.eset.com
+ESET Push Notification Service,eset,eset-epns,Notifications,epns.eset.com
+Facebook Messenger,facebook,facebook-messenger,Instant messaging,"edge-chat.messenger.com, edge-chat.facebook.com, edge-mqtt.facebook.com, mqtt-mini.facebook.com"
+WhatsApp,facebook,whatsapp,Instant messaging,"*.wa.me, *.whatsapp-plus.info, *.whatsapp-plus.me, *.whatsapp-plus.net, *.whatsapp.cc, *.whatsapp.com, *.whatsapp.info, *.whatsapp.net, *.whatsapp.org, *.whatsapp.tv, *.whatsappbrand.com"
+Facebook Media,facebook,facebook-media,Media,*.xx.fbcdn.net
+Facebook Graph API,facebook,facebook-graph,Other APIs,"graph.facebook.com, b-graph.facebook.com"
+Facebook Web,facebook,facebook-web,Social,"www.facebook.com, m.facebook.com, web.facebook.com"
+Instagram,facebook,instagram,Social,"*.cdninstagram.com, *.instagram.c10r.facebook.com, *.instagram.com, *.z-p42-instagram.c10r.facebook.com"
+Google Analytics & Ads,google,google-ads,Advertising,"*.2mdn.net, *.adsense.google.com, *.adservice.google.ca, *.adservice.google.co.in, *.adservice.google.co.kr, *.adservice.google.co.uk, *.adservice.google.co.za, *.adservice.google.com, *.adservice.google.com.ar, *.adservice.google.com.au, *.adservice.google.com.br, *.adservice.google.com.co, *.adservice.google.com.gt, *.adservice.google.com.mx, *.adservice.google.com.pe, *.adservice.google.com.ph, *.adservice.google.com.pk, *.adservice.google.com.tr, *.adservice.google.com.tw, *.adservice.google.com.vn, *.adservice.google.de, *.adservice.google.dk, *.adservice.google.es, *.adservice.google.fr, *.adservice.google.nl, *.adservice.google.no, *.adservice.google.ru, *.adservice.google.vg, *.app-measurement.com, *.appspot.com, *.doubleclick.com, *.doubleclick.net, *.doubleclickbygoogle.com, *.google-analytics.com, *.googleadservices.com, *.googlesyndication.com, *.googletagmanager.com, *.googletagservices.com, *.gstaticadssl.l.google.com, *.mail-ads.google.com, *.ssl-google-analytics.l.google.com, *.www-googletagmanager.l.google.com"
+Google Connectivity Check,google,google-conncheck,Analytics & Telemetry,connectivitycheck.gstatic.com
+Google Safe Browsing API,google,google-safebrowsing,Antivirus,safebrowsing.googleapis.com
+Google Authentication,google,google-authentication,Authentication,"accounts.google.com, myaccount.google.com, oauth2.googleapis.com, ogs.google.com, accounts.youtube.com"
+Google Drive,google,google-drive,File sharing,"*.drive.google.com, *.docs.google.com, *.googleusercontent.com"
+Google User Location API,google,google-userlocation,Location,userlocation.googleapis.com
+Gmail,google,gmail,Mail,"*.gmail.com, *.mail.google.com"
+Google Fonts,google,google-fonts,Media,"fonts.gstatic.com, fonts.googleapis.com"
+Youtube,google,youtube,Media,"*.googlevideo.com, *.video.google.com, *.youtu.be, *.youtube-nocookie.com, *.youtube-ui.l.google.com, *.youtube.com, *.youtube.googleapis.com, *.youtubeeducation.com, *.youtubei.googleapis.com, *.yt3.ggpht.com, *.ytimg.com"
+Google Backend Services,google,google-services,Other APIs,"clients2.google.com, clients3.google.com, clients4.google.com, clients5.google.com, clients6.google.com"
+Google Play,google,google-play,Other services,"play.google.com, *.gvt1.com, *.gvt2.com, *.gvt3.com, android.clients.google.com"
+Google Translate,google,google-translate,Other services,"translate.google.com, translate.googleapis.com"
+Chrome Remote Desktop API,google,chrome-remotedesktop,Remote desktop,remotedesktop-pa.googleapis.com
+Google Search & Maps,google,google-www,Search,"www.google.com, www.google.cz, www.google.at, www.google.sk, maps.googleapis.com, mobilemaps.googleapis.com"
+Google Hangouts/Meets,google,google-hangouts,Videoconferencing,"*.alt1-mtalk.google.com, *.alt2-mtalk.google.com, *.alt3-mtalk.google.com, *.alt4-mtalk.google.com, *.alt5-mtalk.google.com, *.alt6-mtalk.google.com, *.alt7-mtalk.google.com, *.alt8-mtalk.google.com, *.hangouts.clients6.google.com, *.hangouts.google.com, *.hangouts.googleapis.com, *.meet.google.com, *.meetings.googleapis.com, *.mobile-gtalk.l.google.com, *.mobile-gtalk4.l.google.com, *.mtalk.google.com, *.talk.google.com, *.talkx.l.google.com"
+McAfee Global Threat Intelligence,mcafee,mcafee-gti,Antivirus,*.gti.mcafee.com
+McAfee Real Protect cloud-based scanning,mcafee,mcafee-realprotect,Antivirus,realprotect1.mcafee.com
+McAfee CCS (Canadian Common Criteria Evaluation and Certification Scheme),mcafee,mcafee-ccs,Antivirus,*.ccs.mcafee.com
+MS Diagnostic Data,microsoft,microsoft-diagnostic,Analytics & Telemetry,"v10.events.data.microsoft.com, v20.events.data.microsoft.com, eu-v10.events.data.microsoft.com, eu-v20.events.data.microsoft.com, watson.telemetry.microsoft.com"
+MS Windows Settings API,microsoft,microsoft-settings,Analytics & Telemetry,"settings-win.data.microsoft.com, settings.data.microsoft.com, *.vortex-win.data.microsoft.com"
+MS Notes Insights,microsoft,microsoft-notes,Analytics & Telemetry,insights.notes.microsoft.com
+Visual Studio Application Insights,microsoft,visualstudio-insights,Analytics & Telemetry,dc.services.visualstudio.com
+MS Windows Defender,microsoft,microsoft-defender,Antivirus,"*.smartscreen.microsoft.com, wdcp.microsoft.com, wdcpalt.microsoft.com, wdcpalt.microsoft.com, definitionupdates.microsoft.com, checkappexec.microsoft.com, smartscreen-prod.microsoft.com, europe.smartscreen-prod.microsoft.com"
+MS Authentication,microsoft,microsoft-authentication,Authentication,"*.account.live.com, *.activedirectory.windowsazure.com, *.client.hip.live.com, *.graph.microsoft.com, *.graph.windows.net, *.login.live.com, *.login.microsoftonline.com, *.login.windows.net, *.microsoftazuread-sso.com, *.msauth.net, *.msftauth.net, *.msidentity.com, *.myaccount.microsoft.com, *.mysignins.microsoft.com, *.passport.net, *.passwordreset.microsoftonline.com, *.signup.live.com"
+MS OneDrive,microsoft,microsoft-onedrive,File sharing,"*.1drv.com, *.1drv.ms, *.docs.live.net, *.livefilestore.com, *.onedrive.com, *.onedrive.live.com, *.settings.live.net, *.skyapi.live.net, *.skyapi.policies.live.net, *.skydrivesync.policies.live.net, *.storage.live.com, *.windows.policies.live.net"
+Xbox Live,microsoft,xbox-live,Games,"*.e87.dspb.akamaiedge.net, *.e87.dspg.akamaiedge.net, *.gamepass.com, *.xboxab.com, *.xboxab.net, *.xboxlive.com, *.xboxservices.com"
+MS Outlook,microsoft,outlook,Mail,"*.acompli.net, *.baydin.com, *.hotmail.com, *.imap-mail.outlook.com, *.mail.live.com, *.olsvc.com, *.outlook-1.cdn.office.net, *.outlook.com, *.outlook.com.edgekey.net, *.outlook.ha.office365.com, *.outlook.live.com, *.outlook.live.net, *.outlook.office365.com, *.outlookmobile.com, *.ow1.res.office365.com, *.ow2.res.office365.com, *.r3.res.office365.com, *.r4.res.office365.com"
+MS Windows Push Notification Services,microsoft,microsoft-push,Notifications,*.wns.windows.com
+MS Edge New Tab Page,microsoft,edge-ntp,Other APIs,ntp.msn.com
+MS Office 365,microsoft,office365,Other services,"*.assets-yammer.com, *.client-office365-tas.msedge.net, *.clo.footprintdns.com, *.e11271.dscg.akamaiedge.net, *.microsoftonline-p.com, *.microsoftonline.com, *.msocdn.com, *.msocsp.com, *.nrb.footprintdns.com, *.o365filtering.com, *.office.com, *.office.de, *.office.microsoft, *.office.net, *.office365.com, *.office365.us, *.officeapps.live.com, *.officeapps.live.com.edgekey.net, *.officecdn.microsoft.com, *.officeclient.microsoft.com, *.onmicrosoft.com, *.svc.ms, *.yammer.com, self.events.data.microsoft.com"
+Bing,microsoft,bing,Search,"*.api-bing-com.e-0001.e-msedge.net, *.bi.ng, *.bing.com, *.bing.com.bo, *.bing.com.co, *.bing.com.cy, *.bing.com.gt, *.bing.jp, *.bing.net, *.bing.office.net, *.bingapis.com, *.bingforbusiness.com, *.cortana.ai, *.windowssearch.com"
+MS Windows Update,microsoft,microsoft-update,Software updates,"*.prod.do.dsp.mp.microsoft.com, *.update.microsoft.com"
+VS Code Update,microsoft,vscode-update,Software updates,update.code.visualstudio.com
+Skype,microsoft,skype,Videoconferencing,"*.lync.com, *.sfbassets.com, *.skype-calling-missedcallsregistrar-prod-wus.cloudapp.net, *.skype.com, *.skypeassets.com, *.skypeecs-prod-use-0-b.cloudapp.net, *.skypeecs-prod-usw-0.cloudapp.net, *.skypeforbusiness.com"
+MS Teams,microsoft,teams,Videoconferencing,"*.api.teams.skype.com, *.img.teams.skype.com, *.teams-msgapi.trafficmanager.net, *.teams.cdn.office.net, *.teams.events.data.microsoft.com, *.teams.microsoft.com, *.teams.microsoft.us, *.teams.office.com, *.teams.office.net, *.teams.skype.com, *.teams.trafficmanager.net"
+MS Weather,microsoft,microsoft-weather,Weather,*.weather.microsoft.com
+Mozilla Telemetry,mozilla,mozilla-telemetry,Analytics & Telemetry,incoming.telemetry.mozilla.org
+Firefox Remote Settings,mozilla,firefox-settings,Analytics & Telemetry,firefox.settings.services.mozilla.com
+Thunderbird Telemetry,mozilla,thunderbird-telemetry,Analytics & Telemetry,incoming-telemetry.thunderbird.net
+Mozilla Token Service,mozilla,mozilla-token,Authentication,token.services.mozilla.com
+Firefox Accounts,mozilla,firefox-accounts,Authentication,"profile.accounts.firefox.com, api.accounts.firefox.com"
+Mozilla Location Service,mozilla,mozilla-location,Location,location.services.mozilla.com
+Mozilla Push Service,mozilla,mozilla-push,Notifications,push.services.mozilla.com
+Opera Sitecheck,opera,opera-sitecheck,Antivirus,"sitecheck.opera.com, sitecheck2.opera.com"
+Opera OAuth2,opera,opera-oauth2,Authentication,oauth2.opera-api.com
+Opera Browser Notifications,opera,opera-notifications,Notifications,browser-notifications.opera.com
+Opera Speed Dial,opera,opera-speeddial,Other APIs,speeddials.opera.com
+Opera Autoupdate,opera,opera-autoupdate,Software updates,autoupdate.geo.opera.com
+Opera Weather,opera,opera-weather,Weather,weather.opera-api.com
+Seznam SSP,seznam,seznam-ssp,Advertising,ssp.seznam.cz
+Seznam Login,seznam,seznam-authentication,Authentication,"login.seznam.cz, login.szn.cz, login.novinky.cz"
+Mapy.cz,seznam,maps-cz,Location,*.mapy.cz
+Seznam Email,seznam,seznam-email,Mail,*.email.seznam.cz
+Seznam Media,seznam,seznam-media,Media,"d32-a.sdn.cz, d49-a.sdn.cz, d25-a.sdn.cz, d39-a.sdn.cz, d53-a.sdn.cz, d15-a.sdn.cz, d21-a.sdn.cz, d27-a.sdn.cz, v15-a.sdn.cz, v11-a.sdn.cz, v12-a.sdn.cz, v116-a.sdn.cz"
+Super.cz Media,seznam,super-media,Media,media.super.cz
+Seznam Push Notifications,seznam,seznam-notifications,Notifications,"notifikace.seznam.cz, notifikace.szn.cz, notifikace.novinky.cz"
+Seznam Search,seznam,seznam-search,Search,"search.seznam.cz, suggest.seznam.cz"
+SUKL Auth,sukl,sukl-authentication,Authentication,auth.sukl.cz
+SUKL eRecept,sukl,sukl-erecept,Other APIs,*.erecept.sukl.cz
+SUKL API,sukl,sukl-api,Other APIs,api2.sukl.cz
+AppNexus,,appnexus,Advertising,"*.adnxs-simple.com, *.adnxs.com, *.appnexus.com, *.appnexusgslb.net, *.e6115.g.akamaiedge.net, *.geoadnxs.com, *.geogslb.com"
+Pubmatic,,pubmatic,Advertising,"*.pubmatic.com, *.pubmnet.com"
+Rubicon Project,,rubiconproject,Advertising,*.rubiconproject.com
+R2D2,,r2d2,Advertising,delivery.r2b2.cz
+Loggly,,loggly,Analytics & Telemetry,logs-01.loggly.com
+Huawei Cloud Connectivity Check,,hicloud-conncheck,Analytics & Telemetry,connectivitycheck.platform.hicloud.com
+Huawei Cloud Logservice,,hicloud-logservice,Analytics & Telemetry,logservice-dre.platform.hicloud.com
+Xiaomi Tracking,,xiaomi-tracking,Analytics & Telemetry,"data.mistat.intl.xiaomi.com, api.ad.intl.xiaomi.com"
+Nvidia GFE Events,,nvidiagfe-events,Analytics & Telemetry,events.gfe.nvidia.com
+Avast,,avast,Antivirus,"*.avast.com, *.avast.com.akamaized.net, *.avast.com.edgesuite.net, *.avastbrowser.com, *.avcdn.net, *.ns1dnsavast.com"
+Kaspersky,,kaspersky,Antivirus,"*.kas-labs.com, *.kaspersky-labs.com, *.kaspersky.com, *.labkas.com"
+Malwarebytes Telemetry,,malwarebytes-telemetry,Antivirus,telemetry.malwarebytes.com
+Bitdefender GravityZone,,bitdefender-gravityzone,Antivirus,*.gravityzone.bitdefender.com
+Bitdefender Nimbus,,bitdefender-nimbus,Antivirus,*.nimbus.bitdefender.net
+Xiaomi Account API,,xiaomi-accounts,Authentication,api.account.xiaomi.com
+SSO VSB,,vsb-sso,Authentication,*.sso.vsb.cz
+Docker Auth,,docker-authentication,Authentication,auth.docker.io
+eIdentina,,eidentita,Authentication,nia.eidentita.cz
+Dropbox,,dropbox,File sharing,"*.db.tt, *.dropbox-dns.com, *.dropbox.com, *.dropbox.tech, *.dropboxapi.com, *.dropboxbusiness.com, *.dropboxcaptcha.com, *.dropboxforum.com, *.dropboxforums.com, *.dropboxinsiders.com, *.dropboxmail.com, *.dropboxpartners.com, *.dropboxstatic.com, *.dropboxusercontent.com, *.getdropbox.com"
+Github,,github,File sharing,"*.ghcr.io, *.github.com, *.github.io, *.githubapp.com, *.githubassets.com, *.githubusercontent.com"
+Uschovna,,uschovna,File sharing,*.uschovna.cz
+Ulozto,,ulozto,File sharing,*.uloz.to
+Gitlab (3 providers),,gitlab,File sharing,"gitlab.fit.cvut.cz, gitlab.liberouter.org, gitlab.fel.cvut.cz"
+"ownCloud (CESNET, MUNI)",,owncloud,File sharing,"owncloud.cesnet.cz, owncloud.is.muni.cz"
+Steam,,steam,Games,"*.s.team, *.steam-chat.com, *.steamchina.com, *.steamcommunity.com, *.steamcontent.com, *.steamgames.com, *.steampowered.com, *.steampowered.com.8686c.com, *.steamstatic.com, *.steamstatic.com.8686c.com, *.steamusercontent.com, *.valvesoftware.com"
+Unity Games,,unity-games,Games,*.unity3d.com
+Riot Games,,riot-games,Games,"*.leagueoflegends.com, *.riotcdn.net, *.riotgames.com"
+King Games,,king-games,Games,"*.king.com, *.midasplayer.com"
+EA Games,,ea-games,Games,"*.ea.com, *.eamobile.com, *.easports.com, *.tnt-ea.com"
+UZIS PLF,,uzis-plf,Information systems,plf.uzis.cz
+UZIS OCKO,,uzis-ocko,Information systems,ocko.uzis.cz
+"Moodle (CTU, CZU, VUTBR)",,moodle,Information systems,"moodle-vyuka.cvut.cz, moodle.fel.cvut.cz, moodle.czu.cz, moodle.vutbr.cz"
+"Redmine (CESNET, MFF UK, KIV ZCU)",,redmine,Information systems,"redmine.cesnet.cz, redmine.liberouter.org, redmine.ms.mff.cuni.cz, redmine.kiv.zcu.cz"
+INSIS VSE,,vse-insis,Information systems,insis.vse.cz
+ISIR Justice,,justice-isir,Information systems,isir.justice.cz
+KSRZIS Registr,,ksrzis,Information systems,*.ksrzis.cz
+National Digital Library,,ndk,Information systems,ndk.cz
+Katastr Nahlizeni,,katastr-nahlizeni,Information systems,nahlizenidokn.cuzk.cz
+Datova Schranka,,datova-schranka,Information systems,*.mojedatovaschranka.cz
+Slack,,slack,Instant messaging,"*.slack-core.com, *.slack-edge.com, *.slack-files.com, *.slack-imgs.com, *.slack-msgs.com, *.slack-redir.net, *.slack.com, *.slackb.com"
+Discord,,discord,Instant messaging,"*.discord.com, *.discord.gg, *.discord.media, *.discordapp.com, *.discordapp.net, *.discordstatus.com"
+CSAS Webchat,,csas-webchat,Instant messaging,webchat.csas.cz
+Fio IB,,fio-ib,Internet banking,ib.fio.cz
+CSOB IB,,csob-ib,Internet banking,ib.csob.cz
+Moneta IB,,moneta-ib,Internet banking,ib.moneta.cz
+CSAS IB,,csas-ib,Internet banking,"george.csas.cz, bezpecnost.csas.cz"
+RB IB,,rb-ib,Internet banking,online.rb.cz
+Airbank IB,,airbank-ib,Internet banking,ib.airbank.cz
+KB IB,,kb-ib,Internet banking,"mojebanka.kb.cz, login.kb.cz"
+3-D Secure (3 providers),,3dsecure,Internet banking,"3dsecure.mbank.cz, 3dsecure.gpwebpay.com, 3dsecure.csas.cz, 3dsecure2.csas.cz"
+Yahoo Mail,,yahoo-mail,Mail,"*.imap.aol.com, *.mail.bf2.yahoo.com, *.mail.g03.yahoodns.net, *.mail.gq1.yahoo.com, *.mail.ne1.yahoo.com, *.mail.yahoo.com, *.mailyahoo.com"
+Vimeo,,vimeo,Media,"*.vimeo.com, *.vimeocdn.com"
+Netflix,,netflix,Media,"*.netflix.ca, *.netflix.com, *.netflix.net, *.netflixdnstest1.com, *.netflixdnstest10.com, *.netflixdnstest2.com, *.netflixdnstest3.com, *.netflixdnstest4.com, *.netflixdnstest5.com, *.netflixdnstest6.com, *.netflixdnstest7.com, *.netflixdnstest8.com, *.netflixdnstest9.com, *.netflixinvestor.com, *.netflixtechblog.com, *.nflxext.com, *.nflximg.com, *.nflximg.net, *.nflxso.net, *.nflxvideo.net"
+Twitch,,twitch,Media,"*.ext-twitch.tv, *.jtvnw.net, *.live-video.net, *.ttvnw.net, *.twitch.tv, *.twitchcdn.net, *.twitchsvc.net"
+O2 TV,,o2tv,Media,*.o2tv.cz
+Font Awesome,,font-awesome,Media,"ka-f.fontawesome.com, use.fontawesome.com"
+Wikimedia Commons,,wikimedia-commons,Media,commons.wikimedia.org
+Sumava Camdata,,sumava-camdata,Media,camdata.sumava.eu
+Spotify,,spotify,Music,"*.pscdn.co, *.scdn.co, *.spoti.fi, *.spotify.com, *.spotifycdn.com, *.spotifycdn.net, *.spotifycharts.com, *.spotifycodes.com, *.spotifyjobs.com, *.spotilocal.com, *.video-akp-cdn-spotify-com.akamaized.net"
+SoundCloud,,soundcloud,Music,"*.sndcdn.com, *.soundcloud.com"
+UZIS API,,uzis-api,Other APIs,api.uzis.cz
+Autodesk API,,autodesk,Other APIs,ase.autodesk.com
+DoH (5 providers),,doh,Other APIs,"*.cloudflare-dns.com, dns.google, dns.adguard.com, doh.opendns.com, odvr.nic.cz"
+Hlidac statu OCR,,hlidacstatu-ocr,Other APIs,ocr.hlidacstatu.cz
+eKasa SK,,ekasa,Other APIs,ekasa.financnasprava.sk
+VZP B2B API,,vzp-api,Other APIs,prod.b2b.vzp.cz
+Aukro Backend,,aukro-backend,Other APIs,backend.aukro.cz
+Rozhlas API,,rozhlas-api,Other APIs,api.rozhlas.cz
+Zotero API,,zotero,Other APIs,"api.zotero.org, repo.zotero.org"
+Obalky Knih,,obalky-knih,Other APIs,"cache.obalkyknih.cz, cache1.obalkyknih.cz, cache2.obalkyknih.cz"
+Nvidia GFE Services,,nvidiagfe-services,Other APIs,services.gfe.nvidia.com
+Grammarly,,grammarly,Other services,"*.grammarly.com, *.grammarly.io, *.grammarlyaws.com"
+Signageos,,signageos,Other services,*.signageos.io
+Booking.com,,booking-com,Other services,"*.booking.com, *.bstatic.com"
+Salesforce,,salesforce,Other services,"*.documentforce.com, *.exacttarget.com, *.exct.net, *.force.com, *.krxd.net, *.pardot.com, *.salesforce.com, *.salesforceliveagent.com, *.sfmc-content.com"
+Dopravni Info,,dopravni-info,Other services,*.dopravniinfo.cz
+VMware VCSA,,vmware-vcsa,Other services,vcsa.vmware.com
+TeamViewer Client,,teamviewer-client,Remote desktop,client.teamviewer.com
+DuckDuckGo,,duckduckgo,Search,*.duckduckgo.com
+MLP Search,,mlp-search,Search,"search.mlp.cz, msearch.mlp.cz"
+TikTok,,tiktok,Social,"*.abtest-va-tiktok.byteoversea.com, *.isnssdk.com, *.lf1-ttcdn-tos.pstatp.com, *.muscdn.com, *.musemuse.cn, *.musical.ly, *.p1-tt-ipv6.byteimg.com, *.p1-tt.byteimg.com, *.p16-ad-sg.ibyteimg.com, *.p16-tiktok-sg.ibyteimg.com, *.p16-tiktok-sign-va-h2.ibyteimg.com, *.p16-tiktok-va-h2.ibyteimg.com, *.p16-tiktok-va.ibyteimg.com, *.p16-va-tiktok.ibyteimg.com, *.p26-tt.byteimg.com, *.p3-tt-ipv6.byteimg.com, *.p9-tt.byteimg.com, *.sf1-ttcdn-tos.pstatp.com, *.sf16-ttcdn-tos.ipstatp.com, *.sf6-ttcdn-tos.pstatp.com, *.sgsnssdk.com, *.tiktok.com, *.tiktokcdn-in.com, *.tiktokcdn.com, *.tiktokcdn.com.c.bytetcdn.com, *.tiktokcdn.com.c.worldfcdn.com, *.tiktokcdn.com.wsdvs.com, *.tiktokcdn.liveplay.myqcloud.com, *.tiktokv.com, *.tiktokv.com.akamaized.net, *.ttlivecdn.com, *.ttlivecdn.com.akamaized.net, *.ttlivecdn.com.c.worldfcdn.com, *.ttlivecdn.com.wsdvs.com, *.ttoversea.net"
+Snapchat,,snapchat,Social,"*.addlive.io, *.feelinsonice.com, *.sc-cdn.net, *.sc-corp.net, *.sc-gw.com, *.sc-jpl.com, *.sc-prod.net, *.sc-static.net, *.snap-dev.net, *.snapads.com, *.snapchat.com, *.snapkit.com"
+Twitter,,twitter,Social,"*.ads-twitter.com, *.periscope.tv, *.pscp.tv, *.t.co, *.tweetdeck.com, *.twimg.akadns.net, *.twimg.com, *.twitpic.com, *.twitter.com, *.twitterinc.com, *.twitteroauth.com, *.twitterstat.us, *.twttr.com"
+Tinder,,tinder,Social,"*.gotinder.com, *.tinder.com, *.tindersparks.com"
+Docker Registry,,docker-registry,Software updates,registry-1.docker.io
+NPM Registry,,npm-registry,Software updates,registry.npmjs.org
+Unpkg,,unpkg,Software updates,unpkg.com
+Zoom,,zoom,Videoconferencing,"*.zoom.com, *.zoom.com.cn, *.zoom.us, *.zoomgov.com"
+Webex,,webex,Videoconferencing,"*.ciscospark.com, *.wbx2.com, *.webex.ca, *.webex.co.in, *.webex.co.it, *.webex.co.jp, *.webex.co.kr, *.webex.co.nz, *.webex.co.uk, *.webex.com, *.webex.com.au, *.webex.com.br, *.webex.com.cn, *.webex.com.hk, *.webex.com.mx, *.webex.de, *.webex.es, *.webex.fr"
+AccuWeather,,accuweather,Weather,"*.accu-weather.com, *.accuweather-com.videoplayerhub.com, *.accuweather.com, *.e10414.g.akamaiedge.net, *.accu-weather.com, *.accuweather-com.videoplayerhub.com, *.accuweather.com"
+The Weather Channel,,the-weather-channel,Weather,"*.weather.com, *.weather.com.cn"
+CHMI,,chmi,Weather,*.chmi.cz
