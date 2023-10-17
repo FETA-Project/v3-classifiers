@@ -44,7 +44,7 @@ QUIC_COLUMNS = ["TIME_FIRST", "TIME_LAST",
 QUIC_DATA_DTYPE = np.dtype([("DURATION", "<f4"), ("BYTES", "<u8"), ("BYTES_REV", "<u8"), ("PACKETS", "<u4"), ("PACKETS_REV", "<u4"), ("PPI", "<f4", (3, 30)), ("PPI_LEN", "<u2"), ("PPI_DURATION", "<f4"), ("PPI_ROUNDTRIPS", "<u2"), ("PHIST_SRC_SIZES", "<u4", (8,)), ("PHIST_DST_SIZES", "<u4", (8,)), ("PHIST_SRC_IPT", "<u4", (8,)), ("PHIST_DST_IPT", "<u4", (8,)), ("FLOW_ENDREASON_IDLE", "?"), ("FLOW_ENDREASON_ACTIVE", "?"), ("FLOW_ENDREASON_OTHER", "?")])
 TLS_DATA_DTYPE = np.dtype([("DURATION", "<f4"), ("BYTES", "<u8"), ("BYTES_REV", "<u8"), ("PACKETS", "<u4"), ("PACKETS_REV", "<u4"), ("PPI", "<i4", (4, 30)), ("PPI_LEN", "<u2"), ("PPI_DURATION", "<f4"), ("PPI_ROUNDTRIPS", "<u2"), ("PHIST_SRC_SIZES", "<u4", (8,)), ("PHIST_DST_SIZES", "<u4", (8,)), ("PHIST_SRC_IPT", "<u4", (8,)), ("PHIST_DST_IPT", "<u4", (8,)), ("FLAG_CWR", "?"), ("FLAG_CWR_REV", "?"), ("FLAG_ECE", "?"), ("FLAG_ECE_REV", "?"), ("FLAG_URG", "?"), ("FLAG_URG_REV", "?"), ("FLAG_ACK", "?"), ("FLAG_ACK_REV", "?"), ("FLAG_PSH", "?"), ("FLAG_PSH_REV", "?"), ("FLAG_RST", "?"), ("FLAG_RST_REV", "?"), ("FLAG_SYN", "?"), ("FLAG_SYN_REV", "?"), ("FLAG_FIN", "?"), ("FLAG_FIN_REV", "?"), ("FLOW_ENDREASON_IDLE", "?"), ("FLOW_ENDREASON_ACTIVE", "?"), ("FLOW_ENDREASON_END", "?"), ("FLOW_ENDREASON_OTHER", "?")])
 DATA_PROCESSING_THREADS = 4
-LIGHTGBM_THREADS = -1
+LIGHTGBM_THREADS = 4
 THREAD_POOL_CHUNKSIZE = 500
 
 def process_ppi_row(row: dict, use_push_flags: bool = True) -> None:
@@ -121,7 +121,6 @@ def init_trap():
     return trap
 
 def init_send_buffer(trap):
-    time.sleep(1) # uncomment for debugging
     _, inputspec = trap.getDataFmt(0)
     outputspec = inputspec + ",string PREDICTED_LABEL_MODEL"
     rec = pytrap.UnirecTemplate(outputspec)
@@ -248,8 +247,8 @@ if __name__ == "__main__":
     is_quic = dataset.metadata.protocol == Protocol.QUIC
 
     if args.model_path.endswith(".pickle"):
-        model = torch.load(args.model_path)
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        model = torch.load(args.model_path, map_location=device)
         model = model.to(device)
         model.eval()
     elif "lightgbm" in os.path.basename(args.model_path) and args.model_path.endswith(".txt"):

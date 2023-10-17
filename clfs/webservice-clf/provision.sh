@@ -1,22 +1,21 @@
 #!/bin/bash
 
-echo "Running provision script for web service classifier..."
+echo "Running provision script for web services classifier..."
 
 export shared_path="/feta-repo"
+export venv_path="/opt/python/webservice-clf/venv"
 
-cd `dirname $0`
-
-if [ -f venv/bin/activate ]; then
+if [ -f $venv_path/bin/activate ]; then
     echo "Virtual environment already exists"
 else 
-    python3.11 -m venv venv
+    python3.11 -m venv $venv_path
 fi
 
-source venv/bin/activate
+source $venv_path/bin/activate
+python3.11 -m pip install -r $shared_path/clfs/webservice-clf/requirements.txt
 
-pip3 install -r requirements.txt
+cp $shared_path/clfs/webservice-clf/run-webservice-tls.sh $HOME/run-webservice-tls.sh
+cp $shared_path/clfs/webservice-clf/run-webservice-quic.sh $HOME/run-webservice-quic.sh
+cp $shared_path/clfs/webservice-clf/run-webservice-evaluation.sh $HOME/run-webservice-evaluation.sh
 
-cp $shared_path/clfs/web-service-clf/run-webservice-tls.sh $HOME/run-webservice-tls.sh
-cp $shared_path/clfs/web-service-clf/run-webservice-quic.sh $HOME/run-webservice-quic.sh
-
-echo "Provision of web service classifier finished."
+echo "Provision of web services classifier finished."
