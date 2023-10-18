@@ -1,0 +1,17 @@
+apps_selection: all-known
+apps_selection_explicit_unknown: []
+apps_selection_fixed_longterm: null
+apps_selection_topx: 0
+database_filename: CESNET-QUIC22-M.h5
+disabled_apps: []
+min_train_samples_check: disable-apps
+min_train_samples_per_app: 100
+train_period: W-2022-44
+train_tables_paths:
+- /flows/D20221031
+- /flows/D20221101
+- /flows/D20221102
+- /flows/D20221103
+- /flows/D20221104
+- /flows/D20221105
+- /flows/D20221106

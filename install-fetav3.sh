@@ -1,10 +1,7 @@
 #!/bin/bash
 
-
 ### Export variables
-
 export shared_path="/feta-repo"
-
 
 ### Instal EPEL  
 rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
@@ -20,17 +17,14 @@ rpm --import https://copr-be.cloud.fedoraproject.org/results/@CESNET/NEMEA/pubke
 ### Install base packages
 dnf install -y `cat $shared_path/global_dependencies/yum-packages`
 
-
 mkdir -p /var/run/libtrap/
 chmod 777 /var/run/libtrap/
-
-### Install Python dependencies
-pip3.9 install -r $shared_path/global_dependencies/python-requirements.txt
 
 echo 'export shared_path="/feta-repo"' >> $HOME/.bashrc
 echo 'export shared_path="/feta-repo"' >> /home/vagrant/.bashrc
 
-# run provision scripts for classifiers
+# Run provision scripts for classifiers
+mkdir -p /opt/python/
 for provision_script in `find $shared_path/clfs/ -name provision.sh`; do
      $provision_script
 done;
