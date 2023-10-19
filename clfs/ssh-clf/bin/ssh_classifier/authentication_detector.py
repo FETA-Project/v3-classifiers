@@ -1,3 +1,7 @@
+# (C) 2023 CESNET z.s.p.o. Prague, Czech Republic
+# (C) 2023 FIT CTU in Prague, Czech Republic
+# (C) 2023 FIT VUT in Brno, Czech Republic
+
 import numpy as np
 import pandas as pd
 

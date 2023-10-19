@@ -1,3 +1,8 @@
+# (C) 2023 CESNET z.s.p.o. Prague, Czech Republic
+# (C) 2023 FIT CTU in Prague, Czech Republic
+# (C) 2023 FIT VUT in Brno, Czech Republic
+
+
 from enum import Enum
 from functools import partial
 from typing import Optional
