@@ -1,3 +1,8 @@
+# (C) 2023 CESNET z.s.p.o. Prague, Czech Republic
+# (C) 2023 FIT CTU in Prague, Czech Republic
+# (C) 2023 FIT VUT in Brno, Czech Republic
+
+
 import pandas as pd
 import numpy as np
 from flow_data import DIR_TO, DIR_FROM, ResultAuthTiming, FlowData

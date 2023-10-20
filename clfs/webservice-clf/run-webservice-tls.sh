@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# (C) 2023 CESNET z.s.p.o. Prague, Czech Republic
+# (C) 2023 FIT CTU in Prague, Czech Republic
+# (C) 2023 FIT VUT in Brno, Czech Republic
+
 export shared_path="/feta-repo"
 export venv_path="/opt/python/webservice-clf/venv"
 source $venv_path/bin/activate

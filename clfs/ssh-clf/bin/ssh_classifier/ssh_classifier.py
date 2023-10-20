@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# (C) 2023 CESNET z.s.p.o. Prague, Czech Republic
+# (C) 2023 FIT CTU in Prague, Czech Republic
+# (C) 2023 FIT VUT in Brno, Czech Republic
+
 import pytrap
 import sys
 import argparse
