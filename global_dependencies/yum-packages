@@ -14,3 +14,5 @@ ipfixcol2
 ipfixcol2-unirec-output
 ipfixprobe
 nemea-modules
+./rpm/libdst-1.0.0-20231023150500.el8.x86_64.rpm
+./rpm/libwif-2.1.0-20231023150529.el8.x86_64.rpm
