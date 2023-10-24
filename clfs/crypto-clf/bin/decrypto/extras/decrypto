@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source /opt/decrypto/python/venv/bin/activate
+/usr/bin/decrypto/decrypto_bin $@
