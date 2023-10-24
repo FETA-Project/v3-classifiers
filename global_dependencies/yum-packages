@@ -4,6 +4,7 @@ git
 python3
 make
 python3-pip
+python36-devel
 python39
 python39-devel
 python3.11
