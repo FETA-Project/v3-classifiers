@@ -2,6 +2,7 @@
 
 ### Export variables
 export shared_path="/feta-repo"
+export VAGRANT_HOME="/home/vagrant"
 
 ### Instal EPEL  
 rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
@@ -21,7 +22,7 @@ mkdir -p /var/run/libtrap/
 chmod 777 /var/run/libtrap/
 
 echo 'export shared_path="/feta-repo"' >> $HOME/.bashrc
-echo 'export shared_path="/feta-repo"' >> /home/vagrant/.bashrc
+echo 'export shared_path="/feta-repo"' >> $VAGRANT_HOME/.bashrc
 
 # Run provision scripts for classifiers
 mkdir -p /opt/python/

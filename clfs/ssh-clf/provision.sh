@@ -14,6 +14,6 @@ fi
 source $venv_path/bin/activate
 pip3 install -r $shared_path/clfs/ssh-clf/requirements.txt
 
-cp $shared_path/clfs/ssh-clf/run-ssh.sh $HOME/run-ssh.sh
+cp $shared_path/clfs/ssh-clf/run-ssh.sh $VAGRANT_HOME/run-ssh.sh
 
 echo "Provision of SSH classifier finished."

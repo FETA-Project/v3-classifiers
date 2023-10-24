@@ -14,8 +14,8 @@ fi
 source $venv_path/bin/activate
 python3.11 -m pip install -r $shared_path/clfs/webservice-clf/requirements.txt
 
-cp $shared_path/clfs/webservice-clf/run-webservice-tls.sh $HOME/run-webservice-tls.sh
-cp $shared_path/clfs/webservice-clf/run-webservice-quic.sh $HOME/run-webservice-quic.sh
-cp $shared_path/clfs/webservice-clf/run-webservice-evaluation.sh $HOME/run-webservice-evaluation.sh
+cp $shared_path/clfs/webservice-clf/run-webservice-tls.sh $VAGRANT_HOME/run-webservice-tls.sh
+cp $shared_path/clfs/webservice-clf/run-webservice-quic.sh $VAGRANT_HOME/run-webservice-quic.sh
+cp $shared_path/clfs/webservice-clf/run-webservice-evaluation.sh $VAGRANT_HOME/run-webservice-evaluation.sh
 
 echo "Provision of web services classifier finished."
