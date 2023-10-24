@@ -1,0 +1,4 @@
+---
+dependencies:
+  - role: repository_nemea
+  - role: repository_wif

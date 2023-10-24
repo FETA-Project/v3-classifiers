@@ -1,0 +1,29 @@
+---
+- name: boost library is installed
+  ansible.builtin.dnf:
+    name:
+      - boost
+      - boost-devel
+    state: latest
+
+- name: libtrap library is installed
+  ansible.builtin.dnf:
+    name:
+      - libtrap-devel
+      - libtrap
+    state: latest
+
+- name: unirec library is installed
+  ansible.builtin.dnf:
+    name: unirec
+    state: latest
+
+- name: Nemea++ library is installed
+  ansible.builtin.dnf:
+    name: libnemea++
+    state: latest
+
+- name: WIF library is installed
+  ansible.builtin.dnf:
+    name: libwif
+    state: latest

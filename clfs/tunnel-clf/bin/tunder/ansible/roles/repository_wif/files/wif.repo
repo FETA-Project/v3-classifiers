@@ -1,0 +1,5 @@
+[wif-stable]
+name=Liberouter - Tools for Monitoring and Configuration
+baseurl=https://www.liberouter.org/repo/wif/8/base
+enabled=1
+gpgcheck=0
