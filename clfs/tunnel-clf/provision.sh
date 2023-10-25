@@ -6,9 +6,16 @@ clf_home="`dirname $0`"
 
 for i in `ls $clf_home/rpm/*.rpm`; do
         echo $i
-	dnf install -y --skip-broken $i
+	dnf install -y $i
 done;
 
-cp run-tunnel-det.sh $VAGRANT_HOME/run-tunnel-det.sh
+#create blocklist file
+if [ ! -f /opt/tunder/blocklist.txt ]; then
+    mkdir -p /opt/tunder/
+    touch /opt/tunder/blocklist.txt;
+    chmod 777 /opt/tunder/blocklist.txt;
+fi
+
+cp $clf_home/run-tunnel-det.sh $VAGRANT_HOME/run-tunnel-det.sh
 
 echo "Provision of Tunnel classifier finished."
