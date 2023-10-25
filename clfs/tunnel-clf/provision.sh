@@ -17,5 +17,6 @@ if [ ! -f /opt/tunder/blocklist.txt ]; then
 fi
 
 cp $clf_home/run-tunnel-det.sh $VAGRANT_HOME/run-tunnel-det.sh
+cp $clf_home/run-tunnel-visualiser.sh $VAGRANT_HOME/run-tunnel-visualiser.sh
 
 echo "Provision of Tunnel classifier finished."
