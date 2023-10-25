@@ -10,6 +10,6 @@ for i in `ls $clf_home/rpm/*.rpm`; do
 	dnf install -y --skip-broken $i
 done;
 
-cp run-miner-det.sh $VAGRANT_HOME/run-miner-det.sh
+cp $clf_home/run-miner-det.sh $VAGRANT_HOME/run-miner-det.sh
 
 echo "Provision of Miner classifier finished."
