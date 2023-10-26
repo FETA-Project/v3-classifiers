@@ -4,6 +4,7 @@ git
 python3
 make
 python3-pip
+python36-devel
 python39
 python39-devel
 python3.11
@@ -14,3 +15,5 @@ ipfixcol2
 ipfixcol2-unirec-output
 ipfixprobe
 nemea-modules
+./rpm/libdst-1.0.0-20231023150500.el8.x86_64.rpm
+./rpm/libwif-2.1.0-20231025124122.el8.x86_64.rpm

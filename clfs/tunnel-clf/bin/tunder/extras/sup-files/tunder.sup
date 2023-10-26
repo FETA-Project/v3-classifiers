@@ -1,0 +1,18 @@
+<module>
+<name>tunder</name>
+<enabled>true</enabled>
+<path>/usr/bin/tunder</path>
+<params>--ovpn-port-threshold 2 --wg-port-threshold 2 --ovpn-conf-proba-threshold 50 --ovpn-conf-threshold 2 --wg-conf-proba-threshold 50 --wg-conf-threshold 2 --ssa-conf-proba-threshold 50 --ssa-conf-threshold 2 --tor-threshold 10 --blocklist-file /opt/tunder/blocklist.txt --blocklist-tick-interval 10 --blocklist-threshold 1</params>
+<trapinterfaces>
+<interface>
+  <type>UNIXSOCKET</type>
+  <direction>IN</direction>
+  <params>tunder_flowdata</params>
+</interface>
+<interface>
+  <type>UNIXSOCKET</type>
+  <direction>OUT</direction>
+  <params>tunder_out</params>
+</interface>
+</trapinterfaces>
+</module>

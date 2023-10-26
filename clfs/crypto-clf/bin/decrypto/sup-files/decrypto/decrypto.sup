@@ -1,0 +1,74 @@
+<module>
+  <name>decrypto-prefilter</name>
+  <enabled>false</enabled>
+  <path>/usr/bin/nemea/unirecfilter</path>
+  <params>-F ":PACKETS > 7 and PACKETS_REV > 7 and BYTES > 200 and BYTES_REV > 200  and PROTOCOL == 6"</params>
+  <trapinterfaces>
+  <interface>
+    <type>UNIXSOCKET</type>
+    <direction>IN</direction>
+    <params>eta_flowdata</params>
+  </interface>
+  <interface>
+    <type>UNIXSOCKET</type>
+    <direction>OUT</direction>
+    <params>decrypto_flowdata:timeout=NO_WAIT</params>
+  </interface>
+  </trapinterfaces>
+</module>
+
+<module>
+  <name>decrypto-classifier</name>
+  <enabled>false</enabled>
+  <path>/usr/bin/decrypto/decrypto</path>
+  <params>-m /opt/decrypto/runtime/rf.pickle -b /opt/decrypto/runtime/bridge.py --dst 0.21 --ml 0.975 --no-rst-fin</params>
+  <trapinterfaces>
+  <interface>
+    <type>UNIXSOCKET</type>
+    <direction>IN</direction>
+    <params>decrypto_flowdata</params>
+  </interface>
+  <interface>
+    <type>UNIXSOCKET</type>
+    <direction>OUT</direction>
+    <params>decrypto_out:timeout=NO_WAIT</params>
+  </interface>
+  <interface>
+    <type>BLACKHOLE</type>
+    <direction>OUT</direction>
+  </interface>
+  </trapinterfaces>
+</module>
+
+<module>
+  <name>decrypto-aggregator</name>
+  <enabled>false</enabled>
+  <path>/usr/bin/decrypto/maggregator</path>
+  <params></params>
+  <trapinterfaces>
+    <interface>
+      <type>UNIXSOCKET</type>
+      <direction>IN</direction>
+      <params>decrypto_out</params>
+    </interface>
+    <interface>
+      <type>UNIXSOCKET</type>
+      <direction>OUT</direction>
+      <params>decrypto_aggregator_out</params>
+    </interface>
+  </trapinterfaces>
+</module>
+
+<module>
+  <name>decrypto-reporter2idea</name>
+  <enabled>false</enabled>
+  <path>/usr/bin/decrypto/maggregator2idea</path>
+  <params>-c /etc/nemea/reporters-config.yml</params>
+  <trapinterfaces>
+    <interface>
+      <type>UNIXSOCKET</type>
+      <direction>IN</direction>
+      <params>decrypto_aggregator_out</params>
+    </interface>
+  </trapinterfaces>
+</module>

@@ -16,7 +16,10 @@ wget -O /etc/yum.repos.d/cesnet-nemea.repo https://copr.fedorainfracloud.org/cop
 rpm --import https://copr-be.cloud.fedoraproject.org/results/@CESNET/NEMEA/pubkey.gpg
 
 ### Install base packages
-dnf install -y `cat $shared_path/global_dependencies/yum-packages`
+
+cd $shared_path/global_dependencies
+dnf install -y `cat yum-packages`
+
 
 mkdir -p /var/run/libtrap/
 chmod 777 /var/run/libtrap/

@@ -1,0 +1,66 @@
+Name:          decrypto
+Version:       @VERSION@
+Release:       @RELEASE@%{?dist}
+Summary:       DeCrypto Detector
+
+License:       BSD
+Source0:       %{name}-%{version}.tar.gz
+
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires: gcc >= 8
+BuildRequires: gcc-c++ >= 8
+BuildRequires: make
+BuildRequires: cmake >= 3.8
+
+%description
+The package contains DeCrypto detector implemetation via WIF.
+
+%prep
+%autosetup
+
+%build
+%cmake . -DCMAKE_BUILD_TYPE=Release
+make %{?_smp_mflags}
+
+%install
+make install DESTDIR=%{buildroot}
+
+mkdir -p $RPM_BUILD_ROOT/%{_bindir}/decrypto
+mv %{buildroot}%{_bindir}/decrypto_bin $RPM_BUILD_ROOT/%{_bindir}/decrypto
+
+mkdir -p $RPM_BUILD_ROOT/%{_bindir}/decrypto/src
+cp aggregator/maggregator.py $RPM_BUILD_ROOT/%{_bindir}/decrypto/maggregator
+cp aggregator/src/*.py $RPM_BUILD_ROOT/%{_bindir}/decrypto/src
+
+cp reporter/maggregator2idea.py $RPM_BUILD_ROOT/%{_bindir}/decrypto/maggregator2idea
+
+mkdir -p $RPM_BUILD_ROOT/opt/decrypto/{python,runtime}
+cp extras/requirements.txt $RPM_BUILD_ROOT/opt/decrypto/python
+cp extras/bridge.py $RPM_BUILD_ROOT/opt/decrypto/runtime
+cp extras/rf.pickle $RPM_BUILD_ROOT/opt/decrypto/runtime
+cp extras/decrypto $RPM_BUILD_ROOT/%{_bindir}/decrypto
+
+chmod +x $RPM_BUILD_ROOT/%{_bindir}/decrypto/decrypto
+chmod +x $RPM_BUILD_ROOT/%{_bindir}/decrypto/maggregator
+chmod +x $RPM_BUILD_ROOT/%{_bindir}/decrypto/maggregator2idea
+
+%files
+%{_bindir}/decrypto/decrypto_bin
+%{_bindir}/decrypto/decrypto
+%{_bindir}/decrypto/maggregator
+%{_bindir}/decrypto/src/FlowCache.py
+%{_bindir}/decrypto/src/FlowRecord.py
+%{_bindir}/decrypto/src/ReasonsDefinition.py
+%{_bindir}/decrypto/maggregator2idea
+/opt/decrypto/runtime/bridge.py
+/opt/decrypto/runtime/rf.pickle
+/opt/decrypto/python/requirements.txt
+
+%post
+python3 -m venv /opt/decrypto/python/venv
+source /opt/decrypto/python/venv/bin/activate; pip3 install -r /opt/decrypto/python/requirements.txt
+
+%postun
+rm -rf /opt/decrypto/
+
+%changelog

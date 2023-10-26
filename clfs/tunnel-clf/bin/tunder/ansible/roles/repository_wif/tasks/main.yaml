@@ -1,0 +1,7 @@
+- name: Copy wif.repo file
+  copy:
+    src: wif.repo
+    dest: /etc/yum.repos.d/wif.repo
+    owner: root
+    group: root
+    mode: 0644
