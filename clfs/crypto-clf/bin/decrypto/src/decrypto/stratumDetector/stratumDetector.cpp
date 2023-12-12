@@ -14,12 +14,15 @@ namespace DeCrypto {
 
 StratumDetector::StratumDetector()
 {
+	// Prepare WIF::RegexClassifier to perform pattern matching of the Stratum request
 	m_requestMatcher = std::make_unique<RegexClassifier>(
 		RegexPattern(
 			{"(\"(jsonrpc|method|worker)\":\\s?\")|(params\":|mining\\.(set|not))"},
 			RegexPattern::PatternMatchMode::ANY),
 		std::make_unique<SumCombinator>());
 
+	// Initially to prepare WIF::RegexClassifier to perform pattern matching of the Stratum response
+	// Now turned off because it caused false positives
 	// m_responseMatcher = std::make_unique<RegexClassifier>(
 	//	RegexPattern({"\"id\":", "\"result\":", "\"error\":"}, RegexPattern::PatternMatchMode::ALL),
 	//	std::make_unique<SumCombinator>());
@@ -31,6 +34,7 @@ void StratumDetector::setSources(const std::vector<WIF::FeatureID>& featureIDs)
 	// m_responseMatcher->setFeatureSourceIDs(featureIDs);
 }
 
+// Run the detection process
 std::vector<double> StratumDetector::classify(const std::vector<WIF::FlowFeatures>& flows)
 {
 	auto requestResults = m_requestMatcher->classify(flows);

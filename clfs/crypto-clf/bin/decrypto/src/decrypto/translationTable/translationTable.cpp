@@ -17,6 +17,7 @@ TranslationTable::TranslationTable()
 
 void TranslationTable::update()
 {
+	// Update field IDs when unirec template changes
 	m_unirecIdTable.SRC_IP = ur_get_id_by_name("SRC_IP");
 	m_unirecIdTable.DST_IP = ur_get_id_by_name("DST_IP");
 	m_unirecIdTable.SRC_PORT = ur_get_id_by_name("SRC_PORT");

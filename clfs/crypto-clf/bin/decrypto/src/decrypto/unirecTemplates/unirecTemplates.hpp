@@ -14,6 +14,8 @@ namespace DeCrypto {
 
 namespace Templates {
 
+// Definition of unirec input and output templates
+//(templates are slightly different when debug mode is enabled)
 const std::string INPUT_IFC_TEMPLATE
 	= "ipaddr SRC_IP,ipaddr DST_IP,uint16 SRC_PORT,uint16 DST_PORT,uint8 PROTOCOL,uint64 "
 	  "BYTES,uint64 BYTES_REV,uint32 PACKETS,uint32 PACKETS_REV,time TIME_FIRST,time "
