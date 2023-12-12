@@ -30,6 +30,8 @@ public:
 
 	void update(StoreIndex storeIndex, const WIF::FlowFeatures& data) override
 	{
+		// Process output of the Tor detector and increment the current value stored in CounterStore
+		// (if positive)
 		for (const auto featureID : m_sourceFeatureIDs) {
 			if (data.get<uint8_t>(featureID)) {
 				m_store.increment(storeIndex);

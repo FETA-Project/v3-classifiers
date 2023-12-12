@@ -74,6 +74,8 @@ public:
 	void update(StoreIndex storeIndex, const WIF::FlowFeatures& data) override
 	{
 		std::lock_guard<std::mutex> lock(m_mutex);
+		// Perform blocklist detection of IP addresses, based on user-provided blocklist and
+		// increment the current value stored in CounterStore (if positive)
 		double classificationResult = m_classifier.classify(data);
 		if (classificationResult > 0) {
 			m_store.increment(storeIndex);

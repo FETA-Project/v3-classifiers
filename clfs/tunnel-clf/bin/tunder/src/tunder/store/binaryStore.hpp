@@ -12,6 +12,7 @@
 
 namespace TunDer {
 
+// BinaryStore is a class for storing true/false detection results for each index
 class BinaryStore {
 public:
 	BinaryStore(StoreSize size)

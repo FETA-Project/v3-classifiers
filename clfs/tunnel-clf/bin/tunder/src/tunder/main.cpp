@@ -28,6 +28,7 @@ void mainLoop(
 
 	while (true) {
 		try {
+			// Receive new unirec record
 			std::optional<UnirecRecordView> unirecRecord = inputIfc.receive();
 			if (!unirecRecord) {
 				// Timeouted
@@ -37,8 +38,12 @@ void mainLoop(
 			auto srcIp = transformer.extractSrcIp(*unirecRecord);
 			auto dstIp = transformer.extractDstIp(*unirecRecord);
 
+			// Check if at least one of the SRC and DST IPs is part of observed IP ranges, otherwise
+			// do not process it
 			if (orchestrator.accept(srcIp, dstIp)) {
+				// Extract needed data from unirec record into WIF internal data structure
 				auto flowFeatures = transformer.transform(*unirecRecord, orchestrator.isReversed());
+				// Pass it to the orchestrator
 				orchestrator.onFlowReceived(flowFeatures);
 			}
 		} catch (EoFException&) {
@@ -54,6 +59,7 @@ void mainLoop(
 
 int main(int argc, char* argv[])
 {
+	// Parse input arguments and configure the detector
 	Config config(argc, argv);
 	if (config.showHelpSeen()) {
 		config.showHelp(std::cout);
@@ -62,15 +68,18 @@ int main(int argc, char* argv[])
 
 	config.printConfiguration(std::cout);
 
+	// Initialize Unirec library
 	Unirec unirec({1, 1, "TunDer", "Communication Tunnel Detector"});
 	// try {
 	unirec.init(argc, argv);
 
+	// Prepare input and output interfaces
 	auto inputIfc = unirec.buildInputInterface();
 	inputIfc.setRequieredFormat(UNIREC_IFC_INPUT_TEMPLATE);
 	auto outputIfc = unirec.buildOutputInterface();
 	outputIfc.changeTemplate(UNIREC_IFC_OUTPUT_TEMPLATE);
 
+	// Run main loop
 	mainLoop(config, inputIfc, outputIfc);
 	//} catch (std::exception& ex) {
 	//	std::cout << "Ex: << " << ex.what() << std::endl;

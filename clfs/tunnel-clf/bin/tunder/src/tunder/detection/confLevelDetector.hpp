@@ -31,6 +31,8 @@ public:
 
 	void update(StoreIndex storeIndex, const WIF::FlowFeatures& data) override
 	{
+		// Perform threshold-based detection in CONF_LEVEL proba field and increment the current
+		// value stored in CounterStore (if positive)
 		if (data.get<uint16_t>(m_sourceFeatureID) >= m_confidenceThreshold) {
 			m_store.increment(storeIndex);
 		}
