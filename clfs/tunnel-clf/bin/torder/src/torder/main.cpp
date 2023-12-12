@@ -31,6 +31,7 @@ void mainLoop(
 				break;
 			}
 
+			// Pass received flow to orchestrator for further processing
 			orchestrator.onFlowReceived(*unirecRecord);
 
 		} catch (EoFException&) {
@@ -50,6 +51,7 @@ int main(int argc, char* argv[])
 {
 	std::cout << "TorDer - v" << TORDER_PROJECT_VERSION << std::endl;
 
+	// Initialize Unirec library
 	Unirec unirec({1, 1, "TorDer", "Tor Detector"});
 	try {
 		Config config(argc, argv);
@@ -60,10 +62,12 @@ int main(int argc, char* argv[])
 
 		unirec.init(argc, argv);
 
+		// Prepare Unirec interfaces
 		auto inputIfc = unirec.buildInputInterface();
 		inputIfc.setRequieredFormat(UNIREC_IFC_INPUT_TEMPLATE);
 		auto outputIfc = unirec.buildOutputInterface();
 
+		// Run main loop
 		mainLoop(config, inputIfc, outputIfc);
 	} catch (std::exception& ex) {
 		std::cout << "Exception in Main: " << ex.what() << std::endl;
