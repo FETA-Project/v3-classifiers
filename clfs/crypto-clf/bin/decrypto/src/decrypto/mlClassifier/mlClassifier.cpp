@@ -13,6 +13,7 @@ using namespace WIF;
 
 namespace DeCrypto {
 
+// Define template for the interface with ALF data
 const std::string REPORTER_UNIREC_TEMPLATE
 	= "ipaddr SRC_IP,ipaddr DST_IP,uint16 SRC_PORT,uint16 DST_PORT,double FEATURE_BYTES,double "
 	  "FEATURE_BYTES_REV,double FEATURE_PACKETS,double "
@@ -29,6 +30,8 @@ MlClassifier::MlClassifier(
 	bool useAlf,
 	UnirecOutputInterface& reporterIfc)
 {
+	// Prepare WIF ML classifier, either plain ScikitlearnMlClassifier or AlfClassifier (when ALF
+	// mode is enabled)
 	auto mlClassifier = std::make_unique<ScikitlearnMlClassifier>(bridgePath, modelPath, 1, useAlf);
 	if (useAlf) {
 		auto alfReporter = std::make_unique<UnirecReporter>(reporterIfc, REPORTER_UNIREC_TEMPLATE);
@@ -46,6 +49,7 @@ void MlClassifier::setSources(const std::vector<FeatureID>& featureIDs)
 
 std::vector<double> MlClassifier::classify(const std::vector<FlowFeatures>& flows)
 {
+	// Run the detection
 	return m_mlClassifier->classify(flows);
 }
 

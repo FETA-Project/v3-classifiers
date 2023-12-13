@@ -117,28 +117,36 @@ Processor::Processor(const Config& config, UnirecOutputInterface& reporterIfc)
 	, m_evaluator(config.debug())
 	, m_metaClassifier(m_config, m_perfTracker, reporterIfc)
 {
+	// Prepare buffer for flow bulk processing
 	m_flowBuffer = createBuffer(m_config);
 }
 
 void Processor::mainLoop(UnirecInputInterface& inputIfc, UnirecOutputInterface& outputIfc)
 {
+	// Set required input unirec template
 	prepareInputIfc(inputIfc, m_config.debug());
+	// Set output unirec template
 	prepareOutputIfc(outputIfc, m_config.debug());
 
+	// Set IDs of source fields needed for detection
 	m_metaClassifier.setSources(m_translationTable.wifIds());
 
 	while (true) {
 		try {
+			// Receive unirec record (flow data) and filter out the empty ones
 			std::optional<UnirecRecordView> unirecRecord = inputIfc.receive();
 			if (!unirecRecord) {
 				break;
 			}
+			// If flow does not fulfill needed requirements for detection, do not process it
 			if (prefilter(*unirecRecord)) {
 				continue;
 			}
 
+			// Extract needed information from flow into WIF structure and store it to buffer
 			extractFeaturesToBuffer(m_flowBuffer[m_nextFlowId++], *unirecRecord);
 
+			// If buffer is full, perform the actual detection, clear the buffer and continue
 			if (m_nextFlowId == m_config.bufferSize()) {
 				doDetection(m_flowBuffer, outputIfc);
 				m_nextFlowId = 0;
@@ -153,12 +161,15 @@ void Processor::mainLoop(UnirecInputInterface& inputIfc, UnirecOutputInterface& 
 		}
 	}
 
+	// If the detector was stopped, perform detection for all flows in the buffer
+	// (even when the buffer is not full)
 	if (m_nextFlowId != 0) {
 		std::vector<FlowFeatures>::const_iterator first = m_flowBuffer.begin();
 		std::vector<FlowFeatures>::const_iterator last = m_flowBuffer.begin() + m_nextFlowId;
 		doDetection(std::vector<FlowFeatures>(first, last), outputIfc);
 	}
 
+	// Clean up
 	outputIfc.sendFlush();
 	m_evaluator.dumpAll(std::cout);
 	m_perfTracker.dumpAll(std::cout);
@@ -180,8 +191,10 @@ void Processor::doDetection(
 	const std::vector<FlowFeatures>& buffer,
 	UnirecOutputInterface& outputIfc)
 {
+	// Run weak detectors and store their output for each flow
 	std::vector<std::vector<double>> results = m_metaClassifier.classify(buffer);
 
+	// Process and interpret results, craft and send message to output unirec interface
 	for (unsigned flowId = 0; flowId < results.size(); ++flowId) {
 		bool prediction = false;
 		auto detectorId = Evaluator::UNKNOWN;
@@ -190,19 +203,24 @@ void Processor::doDetection(
 		auto detectionResult = results[flowId];
 		auto tlsSni = buffer[flowId].get<std::string>(m_translationTable.wifIds().TLS_SNI);
 		if (detectionResult[STRATUM_RESULT_ID] == 1) {
+			// Final detection was based on the Stratum Detector
 			prediction = true;
 			detectorId = Evaluator::STRATUM_DETECTOR;
 			explanation = "STRATUM";
 		} else if (tlsSni.size() > 0) {
+			// Final detection was based on the DST combination of the TLS SNI and ML detectors
 			prediction = detectionResult[DST_RESULT_ID] > m_config.dstThreshold();
 			detectorId = Evaluator::DST_COMBINATION;
 			explanation = "DST";
 		} else {
+			// Final detection was based on the ML detector
 			prediction = detectionResult[ML_PROBA_ID] >= m_config.mlThreshold();
 			detectorId = Evaluator::ML_CLASSIFIER;
 			explanation = "ML";
 		}
 
+		// If the detector is running in the Debug mode, check the label and see
+		// if the result is corrent and update counters of tru and false positives and negatives
 		if (m_config.debug()) {
 			const auto label = buffer[flowId].get<std::string>(m_translationTable.wifIds().LABEL);
 			m_evaluator.addResult(detectorId, prediction, label);
@@ -210,10 +228,12 @@ void Processor::doDetection(
 			m_evaluator.addResult(detectorId, prediction);
 		}
 
+		// Send out only positive results, in Debug mode send everything
 		if (!prediction && !m_config.debug()) {
 			continue;
 		}
 
+		// Send message to the output unirec interface
 		sendToOutput(outputIfc, m_flowBuffer[flowId], prediction, explanation);
 	}
 }
@@ -229,7 +249,6 @@ void Processor::sendToOutput(
 	auto& record = outputIfc.getUnirecRecord();
 	auto detectionTime = UrTime::now();
 
-	// IPs, Ports, Protocol
 	record.setFieldFromType<NemeaPlusPlus::IpAddress>(
 		toNemeaIp(flow.get<WIF::IpAddress>(wIds.SRC_IP)),
 		uIds.SRC_IP);
@@ -277,7 +296,7 @@ void Processor::extractFeaturesToBuffer(FlowFeatures& target, const UnirecRecord
 	target.set<uint16_t>(wIds.DST_PORT, flow.getFieldAsType<uint16_t>(uIds.DST_PORT));
 	target.set<uint8_t>(wIds.PROTOCOL, flow.getFieldAsType<uint8_t>(uIds.PROTOCOL));
 
-	// Basic flow
+	// Basic flow information
 	target.set<double>(wIds.PACKETS, flow.getFieldAsType<uint32_t>(uIds.PACKETS));
 	target.set<double>(wIds.PACKETS_REV, flow.getFieldAsType<uint32_t>(uIds.PACKETS_REV));
 	target.set<double>(wIds.BYTES, flow.getFieldAsType<uint64_t>(uIds.BYTES));
@@ -303,7 +322,7 @@ void Processor::extractFeaturesToBuffer(FlowFeatures& target, const UnirecRecord
 	// TLS SNI
 	target.set<std::string>(wIds.TLS_SNI, flow.getFieldAsType<std::string>(uIds.TLS_SNI));
 
-	// If debug mode, then LABEL
+	// If debug mode, then extract LABEL as well
 	if (m_config.debug()) {
 		target.set<std::string>(wIds.LABEL, flow.getFieldAsType<std::string>(uIds.LABEL));
 	}

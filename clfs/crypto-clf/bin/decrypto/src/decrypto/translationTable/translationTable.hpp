@@ -19,6 +19,7 @@
 
 namespace DeCrypto {
 
+// Class which defines and updates IDs of WIF and Unirec fields
 class TranslationTable {
 public:
 	TranslationTable();

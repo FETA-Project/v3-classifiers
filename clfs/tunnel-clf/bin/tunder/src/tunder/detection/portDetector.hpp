@@ -30,6 +30,8 @@ public:
 
 	void update(StoreIndex storeIndex, const WIF::FlowFeatures& data) override
 	{
+		// Perform port detection, and increment current value for specific store index
+		// if port was found
 		for (const auto featureID : m_sourceFeatureIDs) {
 			if (data.get<uint16_t>(featureID) == m_port) {
 				m_store.increment(storeIndex);

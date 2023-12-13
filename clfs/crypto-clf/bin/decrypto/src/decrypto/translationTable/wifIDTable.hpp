@@ -12,6 +12,7 @@
 
 namespace DeCrypto {
 
+// Class which defines template with WIF IDs
 class WifIDTable {
 public:
 	WifIDTable();

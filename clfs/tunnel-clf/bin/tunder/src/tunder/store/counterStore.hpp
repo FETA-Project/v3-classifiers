@@ -12,6 +12,8 @@
 
 namespace TunDer {
 
+// CounterStore is a class for storing unsigned int for each index
+// (for example nubmer of actions seen)
 class CounterStore {
 public:
 	CounterStore(StoreSize size)

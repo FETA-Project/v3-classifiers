@@ -75,24 +75,30 @@ bool Orchestrator::isReversed() const noexcept
 
 void Orchestrator::onFlowReceived(const WIF::FlowFeatures& data)
 {
+	// Use LAST_TIME value as a current timestamp, and initialize first time window
+	// (if it was not already)
 	auto currentFlowTime = data.get<uint64_t>(WIF_ID::TIME_LAST);
 	if (!windowSet()) {
 		initWindow(currentFlowTime);
 	}
 
+	// Find index, based on the IP range and IP
 	StoreIndex storeIndex = recordToIndex(data);
 
+	// Run all registered detectors
 	for (auto& detector : m_detectors) {
 		if (detector->accept(data)) {
 			detector->update(storeIndex, data);
 		}
 	}
 
+	// If time window expired, notify detectors
 	if (shouldExport(currentFlowTime)) {
 		for (auto& detector : m_detectors) {
 			detector->onTimeWindowExpired();
 		}
 
+		// Call handler for expired time window and then set a new one
 		onTimeIntervalExpired();
 		setNextWindowEndTime(currentFlowTime);
 	}
@@ -102,17 +108,21 @@ void Orchestrator::onTimeIntervalExpired()
 {
 	auto detectTime = UrTime::now();
 
+	// Check every IP range and its IP addresses
 	for (unsigned tableID = 0; tableID < m_storeSize.size(); ++tableID) {
 		for (unsigned recordID = 0; recordID < m_storeSize.tableSize(tableID); ++recordID) {
 			StoreIndex storeIndex = {tableID, recordID};
 
+			// Evaluate each registered rule
 			for (const auto& rule : m_rules) {
 				for (const auto& detector : m_detectors) {
 					rule->registerWeakResult(detector->detectorID(), detector->result(storeIndex));
 				}
 
+				// If rule was positive, send a message to the output unirec interface
 				if (rule->result()) {
 					auto& record = m_outIfc.getUnirecRecord();
+					// Reconstruct the origin IP address for current IP range and identifier
 					auto uIp = Utils::toNemeaIp(m_observedRanges[tableID].toIpAddress(recordID));
 
 					record.setFieldFromType<NemeaPlusPlus::IpAddress>(uIp, m_unirecIDTable.SRC_IP);
@@ -132,6 +142,7 @@ void Orchestrator::onTimeIntervalExpired()
 				}
 			}
 
+			// Reset stored information by each detector
 			for (const auto& detector : m_detectors) {
 				detector->reset(storeIndex);
 			}
