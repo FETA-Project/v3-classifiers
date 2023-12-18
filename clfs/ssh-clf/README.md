@@ -37,26 +37,23 @@ Na základě informací o množství přenesených dat a histogramů délek i me
 
 Výstup klasifikátoru se skládá z původně přijatých informací síťového toku obohacený o další kontextové informace o SSH spojení. Kontextové informace lze rozdělit do čtyř kategorií: Výsledek autentizace, Typ použité autentizace, Časová analýza autentizace a Typ SSH provozu. Podrobné výstupní štítky jsou zaneseny v následující Tabulce:
 
-| Kategorie (Název UniRec Políčka)                           | Štítek                                                                            | Popis                            |
-| ----------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------- |
-|Výsledek autentizace(AUTHENTICATION_RESULT)           | fail                                                                              | Neúspěšné přihlášení             |
-|| auth_ok                                                     | Úspěšné přihlášení                                                                |
-|| unknown                                                     | Nepodařilo se rozpoznat                                                           |
-|
-Typ použité autentizace (AUTHENTICATION_METHOD)      | key                                                                               | Přihlášení klíčem                |
-|| password                                                    | Přihlášení heslem                                                                 |
-|| unknown                                                     | Nepodařilo se rozpoznat                                                           |
-| 
-Časová analýza autentizace (AUTHENTICATION_TIMING) | user                                                                              | Přihlašoval se uživatel          |
-|| auto                                                        | Přihlašoval se automat                                                            |
-|| unknown                                                     | Nepodařilo se rozpoznat                                                           |
-|
-|Typ SSH provozu
-(TRAFFIC_CATEGORY)       | upload                                                                            | Došlo k uploadu dat (příkaz scp) |
-|| download                                                    | Došlo k downloadu dat (příkaz scp)                                                |
-|| terminal                                                    | Využití interaktivního terminálu                                                  |
-||other                                                 | Další kategorie (port tunneling, automatické připojení s jedním příkazem a další) |
-|| unknown                                                     | Nepodařilo se detekovat typ provozu (např. při neúspěšném přihlášení)             |
+| Kategorie (Název UniRec Políčka)                   | Štítek   | Popis                                                                             |
+|----------------------------------------------------|----------|-----------------------------------------------------------------------------------|
+| Výsledek autentizace(AUTHENTICATION_RESULT)        | fail     | Neúspěšné přihlášení                                                              |
+|                                                    | auth_ok  | Úspěšné přihlášení                                                                |
+|                                                    | unknown  | Nepodařilo se rozpoznat                                                           |
+| Typ použité autentizace (AUTHENTICATION_METHOD)    | key      | Přihlášení klíčem                                                                 |
+|                                                    | password | Přihlášení heslem                                                                 |
+|                                                    | unknown  | Nepodařilo se rozpoznat                                                           |
+| Časová analýza autentizace (AUTHENTICATION_TIMING) | user     | Přihlašoval se uživatel                                                           |
+|                                                    | auto     | Přihlašoval se automat                                                            |
+|                                                    | unknown  | Nepodařilo se rozpoznat                                                           |
+| Typ SSH provozu (TRAFFIC_CATEGORY)                 | upload   | Došlo k uploadu dat (příkaz scp)                                                  |
+|                                                    | download | Došlo k downloadu dat (příkaz scp)                                                |
+|                                                    | terminal | Využití interaktivního terminálu                                                  |
+|                                                    | other    | Další kategorie (port tunneling, automatické připojení s jedním příkazem a další) |
+|                                                    | unknown  | Nepodařilo se detekovat typ provozu (např. při neúspěšném přihlášení)             |
+
 
 ### Testování
 
