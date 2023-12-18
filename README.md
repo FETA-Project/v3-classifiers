@@ -36,7 +36,7 @@ Sada klasifikačních modulů pro detekci bezpečnostních hrozeb je dostupná v
     └── install-fetav3.sh……………………………………………………………………………………………Instalační…skript
 ```
 
-Archiv rovněž obsahuje soubor Vagrantfile obsahující definici virtuálního počítače, který slouží k demonstračním účelům. Po zapnutí virtuálního stroje pomocí příkazu vagrant up v příkazové řádce, dojde rovnou k instalaci závislostí potřebných pro běh jednotlivých klasifikačních modulů. Jedná se zejména o systém NEMEA, jazyk Python a standardní knihovny pro strojové učení jako PyTorch a SciKit Learn. Po instalaci závislostí dojde rovněž k instalaci samotných modulů. Instalace modulů vytvoří v domovském adresáři uživatele skripty, které slouží k jednoduchému spuštění modulů na demonstračních datech. Výpis domovského adresáře s jednotlivými demonstračními skripty je zde:
+Archiv rovněž obsahuje soubor `Vagrantfile` obsahující definici virtuálního počítače, který slouží k demonstračním účelům. Po zapnutí virtuálního stroje pomocí příkazu `vagrant up` v příkazové řádce, dojde rovnou k instalaci závislostí potřebných pro běh jednotlivých klasifikačních modulů. Jedná se zejména o systém NEMEA, jazyk Python a standardní knihovny pro strojové učení jako PyTorch a SciKit Learn. Po instalaci závislostí dojde rovněž k instalaci samotných modulů. Instalace modulů vytvoří v domovském adresáři uživatele skripty, které slouží k jednoduchému spuštění modulů na demonstračních datech. Výpis domovského adresáře s jednotlivými demonstračními skripty je zde:
 ```
     [vagrant@oracle8 ~]$ ls
     run-miner-det.sh run-tunnel-visualiser.sh run-webservice-tls.sh
