@@ -84,5 +84,5 @@ NEMEA systém umožňuje interakci mezi různými moduly a přenáší data ve f
 | QUIC_UA             | User Agent přenesený v rámci QUIC Client Hello                                             |
 
 
-
-
+# Poděkování
+Tento výsledek vznikl v rámci projektu VJ02010024: ANALÝZA ŠIFROVANÉHO PROVOZU POMOCÍ SÍŤOVÝCH TOKŮ, program IMPAKT 1 financovaný Ministerstvem vnitra České republiky 
