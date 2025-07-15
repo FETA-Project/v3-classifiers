@@ -9,6 +9,7 @@ python39
 python39-devel
 python3.11
 python3.11-devel
+./rpm/unirec-3.0.0-1.x86_64.rpm
 nemea-framework
 nemea-framework-devel
 ipfixcol2
