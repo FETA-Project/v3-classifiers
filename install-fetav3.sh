@@ -14,6 +14,7 @@ wget -O /etc/yum.repos.d/copr-cesnet-ipfix.repo https://copr.fedorainfracloud.or
 rpm --import https://copr-be.cloud.fedoraproject.org/results/@CESNET/IPFIXcol/pubkey.gpg
 wget -O /etc/yum.repos.d/cesnet-nemea.repo https://copr.fedorainfracloud.org/coprs/g/CESNET/NEMEA/repo/epel-8/group_CESNET-NEMEA-epel-8.repo
 rpm --import https://copr-be.cloud.fedoraproject.org/results/@CESNET/NEMEA/pubkey.gpg
+dnf copr enable -y @CESNET/ipfixprobe
 
 ### Install base packages
 
