@@ -15,6 +15,7 @@ nemea-framework-devel
 ipfixcol2
 ipfixcol2-unirec-output
 ipfixprobe
+ipfixprobe-input-pcap
 nemea-modules
 ./rpm/libdst-1.0.0-20231023150500.el8.x86_64.rpm
 ./rpm/libwif-2.1.0-20231025124122.el8.x86_64.rpm
